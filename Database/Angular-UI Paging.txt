@@ -1,0 +1,31 @@
+
+------------------------------------------------------------------------------------------------------------------------
+
+angular.module('ui.bootstrap.demo', ['ngAnimate', 'ui.bootstrap']);
+angular.module('ui.bootstrap.demo').controller('PaginationDemoCtrl', function ($scope, $log) {
+  $scope.maxSize =5;
+  $scope.TotalItems = 150;
+  $scope.PageSize = 5;
+  $scope.CurrentPage = 1;
+  $scope.itemsPerPage =3;
+});
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+<ul uib-pagination total-items="TotalItems" ng-model="CurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" items-per-page="itemsPerPage"></ul>
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+View <select ng-model="pageItems" ng-change="setItemsPerPage(pageItems)">
+<option>3</option>
+<option>5</option>
+<option>10</option>
+<option>20</option>
+<option>30</option>
+<option>40</option>
+<option>50</option>
+</select> records at a time.
+
+------------------------------------------------------------------------------------------------------------------------
